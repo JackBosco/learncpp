@@ -5,9 +5,13 @@
 class stacc
 {
     private:
-        std::vector<int> v {};
-        int s { 0 };
+        std::vector<int> v;
+        int s;
     public:
+        stacc (void)
+            : v { }, s{ }
+        {
+        }
         void push(int n)
         {
             v.push_back(n);
@@ -36,7 +40,7 @@ class stacc
 
 int main()
 {
-    stacc S {};
+    stacc S;
 
     S.print();
     S.push(1);
